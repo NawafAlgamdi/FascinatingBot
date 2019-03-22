@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
-const devs = ['558748214967271424'];
+const devs = ['389090790984515594'];
 const db = require('quick.db');
-const premium = ['558683006395482135']
+const premium = ['470896018603376640']
 const client = new Discord.Client();   
 const bot = new Discord.Client();   
 const giphy = require('giphy-api')();    
@@ -23,10 +23,11 @@ const zalgo = require('zalgolize');
 const fetchVideoInfo = require('youtube-info');
 const YouTube = require('simple-youtube-api');
 const ytdl = require('ytdl-core');
+const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const sql = require("sqlite");
 const dateFormat = require('dateformat'); 
 const pretty = require('pretty-ms') 
-const prefix = '-';
+const prefix = 'a';
 var table = require('table').table
 var ti={}  
 ,spee={}
@@ -34,7 +35,7 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = ['-help','Type -help'];
+    var setGame = ['ahelp','Type ahelp'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -295,7 +296,7 @@ client.on('message', function(msg) {
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
             .setColor('RANDOM')
-	    .setTitle('``INFO D5aaN , off`` ')
+            .setTitle('``INFO 3bker Community ©`` ')
             .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
             .addField('``RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
             .addField('``servers``', [client.guilds.size], true)
@@ -304,8 +305,8 @@ client.on('message', function(msg) {
             .addField('``My Name``' , `[ ${client.user.tag} ]` , true)
             .addField('``My ID``' , `[ ${client.user.id} ]` , true)
 			      .addField('``My Prefix``' , `[ ! ]` , true)
-			      .addField('``My Language``' , `[ Java Script ]` ,
-			      .setFooter('By | D5aaN , off')
+			      .addField('``My Language``' , `[ Java Script ]` , true)
+			      .setFooter('By | 3bker')
     })
 }
 });
